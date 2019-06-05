@@ -16,6 +16,18 @@ int main(void)
       printf("Failed\n");
       exit(1);
     }
+    else if (returnCode == 0)
+    {
+      printf("Child\n");
+      x = 0;
+      printf("X is %d\n", x);
+    }
+    else 
+    {
+      printf("Parent\n");
+      x = 10;
+      printf("X is %d\n", x);
+    }
 
     return 0;
 }
