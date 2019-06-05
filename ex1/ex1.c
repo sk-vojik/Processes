@@ -9,6 +9,25 @@
 int main(void)
 {
     // Your code here
+    int x = 100;
+    int returnCode = fork();
+    if (returnCode < 0)
+    {
+      printf("Failed\n");
+      exit(1);
+    }
+    else if (returnCode == 0)
+    {
+      printf("Child\n");
+      x = 0;
+      printf("X is %d\n", x);
+    }
+    else 
+    {
+      printf("Parent\n");
+      x = 10;
+      printf("X is %d\n", x);
+    }
 
     return 0;
 }
