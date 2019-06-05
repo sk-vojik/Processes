@@ -9,6 +9,13 @@
 int main(void)
 {
     // Your code here
+    int x = 100;
+    int returnCode = fork();
+    if (returnCode < 0)
+    {
+      printf("Failed\n");
+      exit(1);
+    }
 
     return 0;
 }
